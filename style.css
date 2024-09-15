@@ -70,12 +70,14 @@ body {
     grid-column-end: 2;
     display: grid;
     grid-template-rows: auto 1fr;
-    background-color: blueviolet;
+    color: white;
 }
 
 .project-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    /* background: linear-gradient(333deg, rgba(28,27,38,1) 26%, rgba(91,22,66,1) 100%); */
 }
 
 .sidebar-right {
@@ -206,14 +208,17 @@ a {
     margin-top: 8px;
 }
 
+.announcement:not(:first-child) {
+    border-top: solid 2px rgba(184, 6, 219, 0.281);
+    padding-top: 10px;
+}
+
 .announcement h3 {
     font-weight: 700;
     color: white;
-    text-shadow: 1px 1px 10px rgba(219, 218, 218, 0.399);
 }
 
 .sidebar-right h2 {
-    text-shadow: 1px 1px 10px rgba(219, 218, 218, 0.699);
     color: white;
 }
 
@@ -242,4 +247,15 @@ a {
 .trending-item p {
     margin: 0px;
     grid-area: 2 / 2 / 3 / 3;
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.card {
+    background: linear-gradient(333deg, rgba(28,27,38,1) 26%, rgba(91,22,66,1) 100%);
+    padding: 10px;
+    border-radius: 5px;
 }
